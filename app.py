@@ -15,6 +15,3 @@ def home():
         en_out = sent_tokenize(en_out)
         return render_template('input.html', pa_out=pa_out, en_out=en_out)
     return render_template('input.html', pa_out='', en_out='')
-
-
-app.run(debug=True)
