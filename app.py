@@ -2,8 +2,10 @@ from flask import Flask, request
 from flask.templating import render_template
 from script_scrapper2 import crawler
 from nltk import sent_tokenize
+import nltk
 
 app = Flask(__name__)
+nltk.download('punkt')
 
 
 @app.route('/', methods=['GET', 'POST'])
