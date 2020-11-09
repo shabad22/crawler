@@ -13,8 +13,8 @@ def home():
         print(link)
         pa_out, en_out = crawler(link)
         en_out = sent_tokenize(en_out)
-        return render_template('output.html', pa_out=pa_out, en_out=en_out)
-    return render_template('input.html')
+        return render_template('input.html', pa_out=pa_out, en_out=en_out)
+    return render_template('input.html', pa_out='', en_out='')
 
 
 app.run(debug=True)
