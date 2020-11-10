@@ -1,0 +1,13 @@
+<form action="/links" method="GET">
+  <div class="container">
+    <br /><br />
+  <div class="dropdown-menu">
+    <label for="comment">Choose Link: </label>
+    <select required name="choose">
+    {% for i in weblinks%}
+      <option value="{{i}}">{{i}}</option>
+    </select>
+    {% endfor %}
+  </div>
+   <button type="submit" class="btn btn-primary mb-2">Crawl</button>
+</form>

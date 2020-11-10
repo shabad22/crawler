@@ -4,19 +4,19 @@
   integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
   crossorigin="anonymous"
 />
-<div class="row">
-  <div class="card border-primary col-md-5">
+<div class="row" style="justify-content: space-around">
+  <div class="card border-primary col-md-6">
     <div class="card-header">Punjabi</div>
-    <div class="card-body">
+    <div class="card-body" style="overflow: scroll; height: 500px">
       {% for item in pa_out.split('\n') %}
       <p class="card-text">{{item}}</p>
       {% endfor %}
     </div>
   </div>
 
-  <div class="card border-primary col-md-5">
+  <div class="card border-primary col-md-6">
     <div class="card-header">English</div>
-    <div class="card-body">
+    <div class="card-body" style="overflow: scroll; height: 500px">
       {% for item in en_out %}
       <p class="card-text">{{item}}</p>
       {% endfor %}
