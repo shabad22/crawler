@@ -25,7 +25,7 @@
   <div class="container">
     <br /><br />
     <div class="d-flex align-content-md-center">
-      <div class="form-group mx-sm-3 mb-2">
+      <div class="form-group mb-2 col-md-2">
         <label for="inputPassword2" class="sr-only">Link</label>
         <input
           required
@@ -36,14 +36,19 @@
           placeholder="Link"
         />
       </div>
-      <button type="submit" class="btn btn-primary mb-2">Crawl</button>
-    </div>
-    <div class="dropdown show">
-      <select required name="choose" class="selectpicker form-control">
-        {% for o in web_links %}
-        <option class="dropdown-item" value="{{ o }}">{{ o }}</option>
-        {% endfor %}
-      </select>
+      <div
+        class="dropdown show mb-2 col-md-8"
+        style="padding-left: 1px; padding-right: 15px"
+      >
+        <select required name="choose" class="selectpicker form-control">
+          {% for o in web_links %}
+          <option class="dropdown-item" value="{{ o }}">{{ o }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <button type="submit" class="btn btn-outline-primary mb-2 col-md-2">
+        Crawl
+      </button>
     </div>
   </div>
 </form>
@@ -51,7 +56,7 @@
   <div class="card border-primary col-md-6">
     <div class="card-header">Punjabi</div>
     <div class="card-body" style="overflow: scroll; height: 500px">
-      {% for item in pa_out.split('\n') %}
+      {% for item in pa_out %}
       <p class="card-text">{{item}}</p>
       {% endfor %}
     </div>
