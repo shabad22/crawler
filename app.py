@@ -17,10 +17,10 @@ def home():
             link = request.form['choose']
         pa_out, en_out = crawler(link)
         en_out = sent_tokenize(en_out)
-        en_out, pa_out = clean_en_pa(en_out, pa_out.split('\n'))
+#         en_out, pa_out = clean_en_pa(en_out, pa_out.split('\n'))
         web_links = crawl_links(link)
-        # return render_template('input.html', link='link', web_links=web_links, pa_out=pa_out.split('\n'), en_out=en_out)
-        return render_template('input.html', link='link', web_links=web_links, pa_out=pa_out, en_out=en_out)
+        return render_template('input.html', link='link', web_links=web_links, pa_out=pa_out.split('\n'), en_out=en_out)
+#         return render_template('input.html', link='link', web_links=web_links, pa_out=pa_out, en_out=en_out)
     return render_template('input.html', link='none', pa_out='', en_out='', web_links=['none'])
 
 
