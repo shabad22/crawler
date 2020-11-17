@@ -4,18 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pylint = "*"
-rope = "*"
 
 [packages]
+flask = "*"
 bs4 = "*"
 requests = "*"
-python-dotenv = "*"
 langdetect = "*"
-flask = "*"
 nltk = "*"
-gevent = "*"
-gunicorn = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8"

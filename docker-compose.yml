@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  crawler:
+    build: .
+    container_name: crawler
+    restart: always
+    environment:
+      - APP_NAME=Crawler
+      - FLASK_DEBUG=True
+      - FLASK_APP=app
+      - CONTENT_TAG=p
+      - ENCODING_TYPE=utf-8
+    ports:
+      - "7000:7000"

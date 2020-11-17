@@ -3,6 +3,7 @@ from flask.templating import render_template
 from script_scrapper2 import crawler, crawl_links
 from nltk import sent_tokenize
 import nltk
+import numpy
 from langdetect import detect
 
 app = Flask(__name__)
@@ -25,6 +26,8 @@ def home():
 
 
 def clean_en_pa(en_data, pa_data):
+    en_data = numpy.array(en_data)
+    pa_data = numpy.array(pa_data)
     temp_en_data = []
     temp_pa_data = []
     for i in en_data:

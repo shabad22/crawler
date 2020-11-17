@@ -1,13 +1,11 @@
 # import packages
 from bs4 import BeautifulSoup
-from dotenv import find_dotenv, load_dotenv
 import requests
 import os
 from cleaner import tokenizer
 from langdetect import detect
 
 # finding provided user defined environment as .env file and load it
-load_dotenv(find_dotenv())
 Encd = os.environ['ENCODING_TYPE']
 Text_Area = os.environ['CONTENT_TAG']
 
